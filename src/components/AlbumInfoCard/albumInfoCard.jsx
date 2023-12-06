@@ -20,7 +20,7 @@ const albumInfoCard = () => {
   }
   useEffect(() => {
     if (artistname) {
-      axios.get(`/api/v1/ArtistImage?artistname=${artistname}`)
+      axios.get(`https://beatbuddybackend.onrender.com/api/v1/ArtistImage?artistname=${artistname}`)
         .then((res) => {
           setArtistUrl(res.data);
 

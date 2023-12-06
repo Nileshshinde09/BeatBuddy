@@ -30,7 +30,6 @@ const Signup = () => {
                 if (userData) {
                     dispatch(login(userData));
                 }
-                console.log(userData)
                 navigate("/")
             }
         } catch (error) {

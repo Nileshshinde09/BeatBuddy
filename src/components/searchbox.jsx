@@ -16,7 +16,7 @@ const searchbox = () => {
 
   // Fetch suggestions from API on component mount
   useEffect(() => {
-    axios.get('/api/v1/availableName')
+    axios.get('https://beatbuddybackend.onrender.com/api/v1/availableName')
       .then((response) => {
         setSuggestion(response.data);
       })

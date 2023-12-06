@@ -8,7 +8,7 @@ const trendingArtist = () => {
     const dispatch =useDispatch()
     const [trendingArtist, setTrendingArtist] = useState(false)
     useEffect(() => {
-        axios.get('/api/v1/getTrendingArtist')
+        axios.get('https://beatbuddybackend.onrender.com/api/v1/getTrendingArtist')
             .then((res) => { setTrendingArtist(res.data) })
             .catch((error) => {
                 console.log(error);

@@ -24,7 +24,7 @@ const Recommender = () => {
   useEffect(() => {
     if(data){
       
-      axios.get(`/api/v1/recommendSongs?songname=${data}`)
+      axios.get(`https://beatbuddybackend.onrender.com/api/v1/recommendSongs?songname=${data}`)
         .then((response) => {
           dispatch(loading())
           dispatch(recommendationlist(response.data));

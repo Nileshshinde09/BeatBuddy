@@ -24,7 +24,7 @@ const Trending = () => {
     }
   }, [])
   useEffect(() => {
-      axios.get('/api/v1/getTrendingAlbum')
+      axios.get('https://beatbuddybackend.onrender.com/api/v1/getTrendingAlbum')
           .then((res) => {setTrendingAlbum(res.data)
             dispatch(trendinglist(res.data))
           })

@@ -14,7 +14,7 @@ const artistInfo = () => {
     const [desc, setDesc] = useState(false)
     const [musicPlatformsUrl, setMusicPlatformsUrl] = useState(false)
     useEffect(() => {
-        axios.get(`/api/v1/getDesc?name=${name}`)
+        axios.get(`https://beatbuddybackend.onrender.com/api/v1/getDesc?name=${name}`)
             .then((res) => {
                 setDesc(res.data);
 

@@ -69,7 +69,7 @@ const searchbox = () => {
     
 </div>
     
-<div className={`bg-white ${result?'':'hidden'} sm:max-h-[15rem] object-top text-black text-center rounded-xl no-scrollbar p-2 space-y-2 overflow-y-scroll`}>
+<div className={`bg-white ${result?'':'hidden'} sm:max-h-[15rem] max-h-[5rem] object-top text-black text-center rounded-xl no-scrollbar p-2 space-y-2 overflow-y-scroll`}>
     {
       result?
       Object.entries(result).map(([id, title])=>{

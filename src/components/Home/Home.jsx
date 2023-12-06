@@ -28,7 +28,7 @@ const Home = () => {
   }, [])
   
   useEffect(() => {
-    axios.get('/api/v1/getTopAlbum')
+    axios.get('https://beatbuddybackend.onrender.com/api/v1/getTopAlbum')
       .then((res) => {
         setTopAlbum(res.data)
         dispatch(homelist(res.data))

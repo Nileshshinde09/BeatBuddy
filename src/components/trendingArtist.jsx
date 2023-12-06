@@ -43,6 +43,16 @@ const trendingArtist = () => {
                         <ArtistSkeleton />
                         <ArtistSkeleton />
                         <ArtistSkeleton />
+                        <ArtistSkeleton />
+                        <ArtistSkeleton />
+                        <ArtistSkeleton />
+                        <ArtistSkeleton />
+                        <ArtistSkeleton />
+                        <ArtistSkeleton />
+                        <ArtistSkeleton />
+                        <ArtistSkeleton />
+                        <ArtistSkeleton />
+                        <ArtistSkeleton />
                     </>
                 }
             </div>

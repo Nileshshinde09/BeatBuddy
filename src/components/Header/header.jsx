@@ -59,8 +59,8 @@ return (
                       </div>
                     </h1>
                     <div>
-                      <img src='public/home.png' className=' max-sm:h-[15rem] sm:h-[20rem] sm:mt-[1rem] min-lg:h-[25rem] drop-shadow-xl'>
-                      </img>
+                      <img src='public/home.png' className=' max-sm:h-[15rem] sm:h-[20rem] sm:mt-[1rem] min-lg:h-[25rem] drop-shadow-xl'/>
+                      
                     </div>
                   </div>
                 </div>

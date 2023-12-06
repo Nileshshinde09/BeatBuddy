@@ -24,7 +24,6 @@ const related = () => {
     }
   }, [Loading])
   useEffect(() => {
-    console.log(relatedAlbum);
     setRelated(Object.values(relatedAlbum).filter((value) => value[0] !== data[0]))
 
   }, [data])

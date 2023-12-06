@@ -22,7 +22,7 @@ const artistInfo = () => {
             .catch((error) => {
                 console.log(error);
             })
-        axios.get(`/api/v1/ArtistImage?artistname=${name}`)
+        axios.get(`https://beatbuddybackend.onrender.com/api/v1/ArtistImage?artistname=${name}`)
             .then((res) => {
                 setImage(res.data);
                 console.log((res.data));
@@ -30,7 +30,7 @@ const artistInfo = () => {
             .catch((error) => {
                 console.log(error);
             })
-        axios.get(`/api/v1/getSocialMedia?artistname=${name}`)
+        axios.get(`https://beatbuddybackend.onrender.com/api/v1/getSocialMedia?artistname=${name}`)
             .then((res) => {
                 setSocial(res.data);
             })
@@ -39,7 +39,7 @@ const artistInfo = () => {
             })
 
 
-        axios.get(`/api/v1/getUrl?name=${name}`)
+        axios.get(`https://beatbuddybackend.onrender.com/api/v1/getUrl?name=${name}`)
             .then((res) => {
                 setMusicPlatformsUrl(res.data);
 

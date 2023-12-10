@@ -1,4 +1,8 @@
 import { NavLink } from 'react-router-dom'
+import { IoHome } from "react-icons/io5";
+import { FaFire } from "react-icons/fa";
+import { MdOutlineSettingsSuggest } from "react-icons/md";
+
 import { useLocation } from 'react-router-dom'
 import React,{ useState,useEffect } from 'react'
 import SubRecommender from './subHeader/subRecommender'
@@ -30,10 +34,15 @@ const nav = () => {
  
   return (
     <>
-    <div className=' text-2xl font-bold text-white mt-5 mx-5 md:mx-20 flex space-x-4 text-center '>
+    <div className='max-sm:hidden text-2xl font-bold text-white mt-5 mx-5 md:mx-20 flex space-x-4 text-center '>
         <NavLink to={'/'} className={({isActive})=>`block drop-shadow-2xl shadow-slate-950 ${isActive?'text-red-900 text-3xl ':'text-slate-400'}`}>{'Home'||<Skeleton/>}</NavLink>
         <NavLink to={'/recommender'}  className={({isActive})=>`block drop-shadow-2xl shadow-slate-950 ${isActive?'text-red-900 text-3xl ':'text-slate-400'}`}>{'Recommender'||<Skeleton/>}</NavLink>
         <NavLink to={'trending'}  className={({isActive})=>`block drop-shadow-2xl shadow-slate-950 ${isActive?'text-red-900 text-3xl ':'text-slate-400'}`}>{'Trending'||<Skeleton/>}</NavLink>
+    </div>
+    <div className='sm:hidden text-2xl font-bold text-white mt-5 mx-5 flex justify-center space-x-10'>
+        <NavLink to={'/'} className={({isActive})=>`block drop-shadow-2xl shadow-slate-950 ${isActive?'text-red-900 text-3xl ':'text-slate-400'}`}>{<IoHome />||<Skeleton/>}</NavLink>
+        <NavLink to={'/recommender'}  className={({isActive})=>`block drop-shadow-2xl shadow-slate-950 ${isActive?'text-red-900 text-3xl ':'text-slate-400'}`}>{<MdOutlineSettingsSuggest />||<Skeleton/>}</NavLink>
+        <NavLink to={'trending'}  className={({isActive})=>`block drop-shadow-2xl shadow-slate-950 ${isActive?'text-red-900 text-3xl ':'text-slate-400'}`}>{<FaFire />||<Skeleton/>}</NavLink>
     </div>
     <div className='sm:w-[25rem] w-screen min-sm:mt-5 text-xl  bg-gradient-to-r from-gray-950 to-red-800 bg-clip-text text-transparent text-center mx-auto'>
     {subhome||<Skeleton/>} 
@@ -43,3 +52,4 @@ const nav = () => {
 }
 
 export default nav
+

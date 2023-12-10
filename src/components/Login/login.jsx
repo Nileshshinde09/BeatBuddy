@@ -28,6 +28,7 @@ const Login = () => {
                 if (userData) {
                     dispatch(authLogin(userData))
                 }
+                console.log(userData)
                 navigate("/")
             }
         } catch (error) {
@@ -61,7 +62,7 @@ const Login = () => {
                                         </div>
                                     </h1>
                                     <div>
-                                        <img src='home.png' className='max-sm:h-[15rem] sm:h-[20rem] sm:mt-[1rem] min-lg:h-[25rem] drop-shadow-xl'>
+                                        <img src='public/home.png' className='max-sm:h-[15rem] sm:h-[20rem] sm:mt-[1rem] min-lg:h-[25rem] drop-shadow-xl'>
                                         </img>
                                     </div>
                                 </div>
@@ -69,7 +70,7 @@ const Login = () => {
                         </div>
                     </div>
                     <div>
-                         <section className=" sm:w-[30rem] dark:bg-gray-900">
+                        <section className=" sm:w-[30rem] dark:bg-gray-900">
                             <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
 
                                 <div className="w-full rounded-lg shadow border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700">
@@ -89,7 +90,7 @@ const Login = () => {
                                         {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
                                         <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit(_login)}>
                                             <div>
-                                                <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+                                                <label for="email" className="block mb-2 text-sm font-mediumtext-white">Your email</label>
                                                 <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required="" 
                                                 {...register("email", {
                                                     required: true,
@@ -101,7 +102,7 @@ const Login = () => {
                                                 />
                                             </div>
                                             <div>
-                                                <label for="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                                                <label for="password" className="block mb-2 text-sm font-medium text-white">Password</label>
                                                 <input type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required=""
                                                 {...register("password", {
                                                     required: true,

@@ -86,7 +86,7 @@ const albamCard = () => {
                       <></>
                     }
                   </div>
-                  <div className="flex flex-wrap w-full mx-10 md:mx-20">
+                  <div className="flex flex-wrap w-full mx-auto md:mx-20">
                     <div></div>
                     {
                       title=='Recommendation' && !error?

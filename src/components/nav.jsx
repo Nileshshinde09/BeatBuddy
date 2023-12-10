@@ -21,13 +21,13 @@ const nav = () => {
   useEffect(() => {
     dispatch(navlocation(location.pathname))
     if (location.pathname=='/'){
-      setsubHome(<SubVideo/>)
+      setsubHome(home)
     }
     else if(location.pathname=='/recommender'){
       setsubHome(<SubRecommender/>)
     }
     else if(location.pathname=='/trending'){
-      setsubHome(<SubVideo/>)
+      setsubHome(home)
     }
     
   }, [location])
@@ -44,7 +44,7 @@ const nav = () => {
         <NavLink to={'/recommender'}  className={({isActive})=>`block drop-shadow-2xl shadow-slate-950 ${isActive?'text-red-900 text-3xl ':'text-slate-400'}`}>{<MdOutlineSettingsSuggest />||<Skeleton/>}</NavLink>
         <NavLink to={'trending'}  className={({isActive})=>`block drop-shadow-2xl shadow-slate-950 ${isActive?'text-red-900 text-3xl ':'text-slate-400'}`}>{<FaFire />||<Skeleton/>}</NavLink>
     </div>
-    <div className='sm:w-[25rem] w-screen min-sm:mt-5 text-xl  bg-gradient-to-r from-gray-950 to-red-800 bg-clip-text text-transparent text-center mx-auto'>
+    <div className='sm:w-[25rem] w-screen min-sm:mt-5 text-xl  bg-gradient-to-r from-gray-200 to-red-100 bg-clip-text text-transparent text-center mx-auto'>
     {subhome||<Skeleton/>} 
     </div>
     </> 
@@ -52,4 +52,3 @@ const nav = () => {
 }
 
 export default nav
-
